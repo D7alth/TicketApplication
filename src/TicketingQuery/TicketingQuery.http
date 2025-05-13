@@ -1,0 +1,11 @@
+@TicketingQuery_HostAddress = http://localhost:5215
+
+GET {{TicketingQuery_HostAddress}}/todos/
+Accept: application/json
+
+###
+
+GET {{TicketingQuery_HostAddress}}/todos/1
+Accept: application/json
+
+###

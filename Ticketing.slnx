@@ -1,0 +1,5 @@
+﻿<Solution>
+    <Project Path="src\Common\Common.csproj" Type="Classic C#"/>
+    <Project Path="src\TicketingCommand\TicketingCommand.csproj" Type="Classic C#"/>
+    <Project Path="src\TicketingQuery\TicketingQuery.csproj" Type="Classic C#"/>
+</Solution>
