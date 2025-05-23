@@ -8,4 +8,13 @@
         <PublishAot>true</PublishAot>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\SharedKernel\SharedKernel.csproj"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="MongoDB.Bson" Version="2.30.0"/>
+    </ItemGroup>
+
 </Project>

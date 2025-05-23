@@ -10,4 +10,9 @@
         <PackageReference Include="MongoDB.Driver.Core" Version="2.30.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\TicketingCommand\TicketingCommand.csproj"/>
+        <ProjectReference Include="..\TicketingQuery\TicketingQuery.csproj"/>
+    </ItemGroup>
+
 </Project>
