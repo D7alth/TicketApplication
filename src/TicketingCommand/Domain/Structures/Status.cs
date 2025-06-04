@@ -1,4 +1,4 @@
-﻿namespace TicketingCommand.Domain.Events;
+﻿namespace TicketingCommand.Domain.Structures;
 
 public struct Status
 {
@@ -6,7 +6,7 @@ public struct Status
 
     public Status(string name)
     {
-        string[] validStatus = ["Open", "Closed", "Cancelled"];
+        string[] validStatus = ["Open", "Closed", "Cancelled", "Deleted"];
         if (!validStatus.Contains(name))
             throw new ArgumentException("Invalid status");
         Name = name;

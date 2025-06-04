@@ -10,7 +10,7 @@ public sealed record EventMetadata
 
     [BsonElement("timestamp")] public DateTime TimeStamp { get; private set; } = DateTime.UtcNow;
 
-    [BsonElement("aggregateId")] public string AggregateId { get; set; } = string.Empty;
+    [BsonElement("aggregateId")] public Guid AggregateId { get; set; } = Guid.Empty;
 
     [BsonElement("aggregateName")] public string AggregateName { get; set; } = string.Empty;
 

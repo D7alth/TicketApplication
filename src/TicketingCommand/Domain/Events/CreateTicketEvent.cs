@@ -1,4 +1,5 @@
 ﻿using SharedKernel.Events;
+using TicketingCommand.Domain.Structures;
 
 namespace TicketingCommand.Domain.Events;
 

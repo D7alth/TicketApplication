@@ -8,15 +8,16 @@ public class Ticket(Guid id) : Entity<Guid>(id)
 {
     public Event<CreateTicketEvent> CreateTicket(string title, string description, Guid createdBy, string status)
     {
-        var ticket = new CreateTicketEvent(title, description, createdBy, status);
-        var eventMetadata = new EventMetadata
+        if (string.IsNullOrEmpty(title))
+            throw new ArgumentException("Title is required");
+        var @event = new CreateTicketEvent(title, description, createdBy, status);
+        var metadata = new EventMetadata
         {
             Version = 1,
-            AggregateId = "Ticket",
-            AggregateName = "Ticket",
-            EventType = "CreateTicketEvent"
+            AggregateId = id,
+            AggregateName = nameof(Ticket),
+            EventType = nameof(CreateTicketEvent)
         };
-        var eventImplementation = new Event<CreateTicketEvent>(nameof(CreateTicketEvent), eventMetadata, ticket);
-        return eventImplementation;
+        return new Event<CreateTicketEvent>(nameof(CreateTicketEvent), metadata, @event);
     }
 }
